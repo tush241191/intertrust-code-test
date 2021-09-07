@@ -1,6 +1,12 @@
+import Layout from '../component/common/Layout';
+import Dashboard from "./dashboard";
 
 export default function Home() {
   return (
-    <h1 className="text-green-600">TailwindCSS Installed</h1>
+    <>
+        <Layout>
+            <Dashboard></Dashboard>
+        </Layout>
+    </>
   )
 }
