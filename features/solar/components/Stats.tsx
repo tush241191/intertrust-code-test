@@ -1,5 +1,24 @@
+import { Solar } from "network/api/solars/schemas"
+import { useEffect, useState } from "react"
 
-const Stats = () =>{
+type SolarProps = {
+    count: number;
+    solarPanels: Solar[];
+}
+
+const Stats = (props: SolarProps) =>{
+
+    const { count, solarPanels } = props
+
+    const[totalEnergy, setTotalEnergy] = useState(0)
+
+    useEffect(()=>{
+        setTotalEnergy(calculateKW())
+    },[props])
+
+    function calculateKW(){
+        return solarPanels.reduce((accumulator, current) => accumulator + Number(current.wattage), 0);
+    }
 
     return(
         <>
@@ -17,7 +36,7 @@ const Stats = () =>{
                 <dd className="ml-16 flex items-center">
                     {/* Dynamic Count */}
                     <p className="text-2xl font-semibold text-gray-900">
-                        30
+                        {count}
                     </p>
                 </dd>
             </div>
@@ -37,7 +56,7 @@ const Stats = () =>{
                 <dd className="ml-16 flex items-center">
                     {/* Dynamic Count */}
                     <p className="text-2xl font-semibold text-gray-900">
-                        71,897kw
+                        {totalEnergy}kW
                     </p>
                 </dd>
             </div>

@@ -15,7 +15,6 @@ const SolarComponent = () =>{
     const fetchData = async () => {
         try{
             const res = await getSolars()
-            console.log("solarPanels: ",res)
             setSolarPanels(res)
         }catch (err){
             console.error("Error: ",err)
@@ -25,9 +24,11 @@ const SolarComponent = () =>{
     return (
         <>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:col-span-2">
-                <Stats/>
                 {solarPanels &&(
-                    <Listing count={solarPanels.stats.count} solarPanels={solarPanels.entries}/>
+                    <>
+                        <Stats count={solarPanels.stats.count} solarPanels={solarPanels.entries}/>
+                        <Listing count={solarPanels.stats.count} solarPanels={solarPanels.entries}/>
+                    </>
                 )}
                 
             </div>

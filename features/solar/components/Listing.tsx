@@ -9,10 +9,6 @@ const Listing = (props: SolarProps) =>{
 
     const { count, solarPanels } = props
 
-    useEffect(()=>{
-        console.log("--Solar--",solarPanels)
-    },[props])
-
     const [isGridView, setIsGridView] = useState(true);
 
     return (
