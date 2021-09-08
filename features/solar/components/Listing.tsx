@@ -29,10 +29,10 @@ const Listing = (props: SolarProps) =>{
                 {isGridView && (
                     // SHOW GRID VIEW
                     <>
-                        <ul role="list" className="mt-3 grid grid-cols-1 gap-5 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                        <ul role="list" className="mt-3 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
                             {solarPanels?.map((panel,i)=>(
-                                <li className="col-span-1 flex shadow-sm rounded-md">
-                                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-gray-500 text-white text-sm font-medium rounded-l-md">
+                                <li key={panel.id} className="col-span-1 flex shadow-sm rounded-md">
+                                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-blue-500 text-white text-sm font-medium rounded-l-md">
                                         {panel.id}
                                     </div>
                                     <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
@@ -61,7 +61,7 @@ const Listing = (props: SolarProps) =>{
                                 <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                                     <div className="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
                                         <table className="min-w-full h-60 overflow-y-auto divide-y divide-gray-200">
-                                            <thead className="bg-gray-500">
+                                            <thead className="bg-blue-500">
                                                 <tr>
                                                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-white uppercase tracking-wider">
                                                         Id
@@ -88,7 +88,7 @@ const Listing = (props: SolarProps) =>{
                                             </thead>
                                             <tbody>
                                             {solarPanels?.map((panel,i)=>(
-                                                <tr className={i%2 == 0 ? 'bg-white':'bg-gray-50'}>
+                                                <tr key={panel.id} className={i%2 == 0 ? 'bg-white':'bg-gray-50'}>
                                                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                                                         {panel.id}
                                                     </td>

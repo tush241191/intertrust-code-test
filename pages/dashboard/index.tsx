@@ -17,12 +17,8 @@ const Dashboard = () => {
         <main>
             <div className="max-w-8xl mx-auto sm:px-6 lg:px-8">
                 <div className="px-4 py-8 sm:px-0">
-                    <div className="mt-3 grid grid-cols-1 gap-4 items-start lg:grid-cols-3 lg:gap-8">
-                        {/* Left column */}
+                    <div className="mt-3">
                         <SolarComponent/>
-
-                        {/* Right column */}
-                        <WeatherComponent/>
                     </div>
                 </div>
             </div>
