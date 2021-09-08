@@ -3,7 +3,7 @@ import { Solar } from './schemas'
 
 export async function getSolars() {
 
-    const url = 'e9349bbc-5e7c-45a3-b8bf-e730311a07c6'
+    const url = 'c9326581-f06e-4887-8528-11957b862b27'
 
     const { data } = await http.get<{
         solars: Solar[]
