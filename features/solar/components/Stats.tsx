@@ -1,5 +1,5 @@
 
-const Statistics = () =>{
+const Stats = () =>{
 
     return(
         <>
@@ -46,4 +46,4 @@ const Statistics = () =>{
     )
 }
 
-export default Statistics
+export default Stats
