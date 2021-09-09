@@ -1,5 +1,4 @@
 import SolarComponent from "features/solar/components/Solar"
-import WeatherComponent from "features/weather/components/Weather"
 
 const Dashboard = () => {
 

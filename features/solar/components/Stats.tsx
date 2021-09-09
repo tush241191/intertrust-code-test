@@ -1,5 +1,6 @@
 import { Solar } from "network/api/solars/schemas"
 import { useEffect, useState } from "react"
+import calculateKW from "utils/helper"
 
 type SolarProps = {
     count: number;
@@ -13,12 +14,8 @@ const Stats = (props: SolarProps) =>{
     const[totalEnergy, setTotalEnergy] = useState(0)
 
     useEffect(()=>{
-        setTotalEnergy(calculateKW())
+        setTotalEnergy(calculateKW(solarPanels))
     },[props])
-
-    function calculateKW(){
-        return solarPanels?.reduce((accumulator, current) => accumulator + Number(current.wattage), 0)/1000;
-    }
 
     return(
         <>
