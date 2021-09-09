@@ -8,8 +8,14 @@ const SolarComponent = () =>{
 
     const[solarPanels,setSolarPanels] = useState(null)
 
+    const delay = 10000
+
     useEffect(()=>{
         fetchData()
+        const interval = setInterval(() => fetchData(), delay)
+        return () => {
+            clearInterval(interval);
+        }
     },[])
 
     const fetchData = async () => {

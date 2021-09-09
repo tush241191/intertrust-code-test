@@ -8,8 +8,14 @@ const WeatherComponent = () =>{
 
     const currentDate = "2021-09-07"
 
+    const delay = 300000
+
     useEffect(()=>{
         fetchData()
+        const interval = setInterval(() => fetchData(), delay)
+        return () => {
+            clearInterval(interval);
+        }
     },[])
 
     const fetchData = async () => {
