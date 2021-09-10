@@ -35,7 +35,7 @@ const SolarComponent = () =>{
                 <WeatherComponent/>
             </div>
             {/* SOLAR STATS/WEATHER INFO END */}
-            <div className="my-14 bg-gray-200 h-0.5 w-full"></div>
+            <div className="my-6 md:my-14 bg-gray-200 h-0.5 w-full"></div>
             {/* SOLAR LISTING START */}
             <div className="flex-row">
                 <Listing count={solarPanels?.stats.count} solarPanels={solarPanels?.entries}/>

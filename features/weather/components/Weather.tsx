@@ -29,19 +29,19 @@ const WeatherComponent = () =>{
     
     return(
         <>
-            <div className="order-first lg:order-last grid grid-cols-1 gap-4">
+            <div className="order-first sm:order-last grid grid-cols-1 gap-4">
                 {/* WEATHER INFORMATION START */}
                 <section aria-labelledby="announcements-title">
                     <div className="rounded-lg bg-blue-600 text-white overflow-hidden shadow">
                         <div className="p-5 xl:p-10">
                             <h2 className="text-base font-medium">{weather?.location.name}, {weather?.location.region}, {weather?.location.country}</h2>
                             <div className="flow-root mt-6">
-                                <div className="flex items-center justify-between">
-                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 xl:h-24 xl:w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <div className="flex items-center justify-between space-x-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 md:h-16 md:w-16 xl:h-24 xl:w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                                     </svg>
-                                    <p className="text-xl xl:text-3xl font-medium">{weather?.current.temperature}°c</p>
-                                    <p className="text-lg xl:text-xl font-medium">{weather?.current.weather_descriptions[0]}</p>
+                                    <p className="text-md md:text-xl xl:text-3xl font-medium text-center">{weather?.current.temperature}°c</p>
+                                    <p className="text-sm md:text-lg xl:text-xl font-medium text-center">{weather?.current.weather_descriptions[0]}</p>
                                     <div className="flex text-xs xl:text-sm">
                                         <div>
                                             <p>Wind: {weather?.current.wind_speed}</p>

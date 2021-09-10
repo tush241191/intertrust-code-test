@@ -7,7 +7,7 @@ const Dashboard = () => {
         <header>
             {/* PAGE HEADER TITLE START */}
             <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h1 className="text-3xl font-bold leading-tight text-gray-900">
+                <h1 className="text-3xl text-center md:text-left font-bold leading-tight text-gray-900">
                     Solar Farm - Dashboard
                 </h1>
             </div>

@@ -34,7 +34,7 @@ const Stats = (props: SolarProps) =>{
                         </dt>
                         <dd className="ml-16 flex items-center">
                             {/* Dynamic Count */}
-                            <p className="text-2xl font-semibold text-gray-900">
+                            <p className="text-lg lg:text-2xl font-semibold text-gray-900">
                                 {count}
                             </p>
                         </dd>
@@ -56,7 +56,7 @@ const Stats = (props: SolarProps) =>{
                         </dt>
                         <dd className="ml-16 flex items-center">
                             {/* Dynamic Count */}
-                            <p className="text-2xl font-semibold text-gray-900">
+                            <p className="text-lg lg:text-2xl font-semibold text-gray-900">
                                 {totalEnergy}kW
                             </p>
                         </dd>

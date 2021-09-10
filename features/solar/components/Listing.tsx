@@ -29,21 +29,21 @@ const Listing = (props: SolarProps) =>{
                 {isGridView && (
                     // SHOW GRID VIEW
                     <>
-                        <ul role="list" className="mt-3 grid grid-cols-2 gap-3 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                        <ul role="list" className="mt-3 grid grid-cols-2 gap-2 sm:gap-4 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5">
                             {solarPanels?.map((panel,i)=>(
                                 <li key={panel.id} className="col-span-1 flex shadow-sm rounded-md">
-                                    <div className="flex-shrink-0 flex items-center justify-center w-16 bg-blue-500 text-white text-sm font-medium rounded-l-md">
+                                    <div className="flex-shrink-0 flex items-center justify-center w-10 lg:w-16 bg-blue-500 text-white text-sm font-medium rounded-l-md">
                                         {panel.id}
                                     </div>
                                     <div className="flex-1 flex items-center justify-between border-t border-r border-b border-gray-200 bg-white rounded-r-md truncate">
                                         <div className="flex items-center px-4 py-2 truncate space-x-4">
                                             <div className="flex-row">
-                                                <p className="text-gray-500 font-medium text-sm">Voltage</p>
-                                                <p className="text-gray-900 font-semibold text-xl">{panel.voltage}v</p>
+                                                <p className="text-gray-500 font-medium text-xs lg:text-sm truncate">Voltage</p>
+                                                <p className="text-gray-900 font-semibold text-sm lg:text-xl truncate">{panel.voltage}v</p>
                                             </div>
                                             <div className="flex-row">
-                                                <p className="text-gray-500 font-medium text-sm">Wattage</p>
-                                                <p className="text-gray-900 font-semibold text-xl">{panel.wattage}w</p>
+                                                <p className="text-gray-500 font-medium text-xs lg:text-sm truncate">Wattage</p>
+                                                <p className="text-gray-900 font-semibold text-sm lg:text-xl truncate">{panel.wattage}w</p>
                                             </div>
                                         </div>
                                     </div>
